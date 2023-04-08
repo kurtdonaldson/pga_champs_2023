@@ -61,8 +61,6 @@ async function getMastersData() {
       mastersObjectArray.push(mastersObject);
     });
 
-    console.log(mastersObjectArray);
-
     return mastersObjectArray;
   } catch (error) {
     console.log(error);

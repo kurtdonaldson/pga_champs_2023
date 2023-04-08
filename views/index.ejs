@@ -14,44 +14,140 @@
   <body>
     <header><h1>Masters Pics 2023</h1></header>
     <main>
-      <% for(let i = 0; i < mastersData.length; i++) { %>
-      <tr>
-        <td><%= mastersData[i].name %></td>
-        <td><%= mastersData[i].round1 %></td>
-        <td><%= mastersData[i].round2 %></td>
-        <td><%= mastersData[i].round3 %></td>
-        <td><%= mastersData[i].round4 %></td>
-        <td><%= mastersData[i].score %></td>
-      </tr>
-      <% } %>
-
-      <div class="joel">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col"></th>
+              <th scope="col">Round 1</th>
+              <th scope="col">Round 2</th>
+              <th scope="col">Round 3</th>
+              <th scope="col">Round 4</th>
+              <th scope="col">Total</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td><b>Ciaran</b></td>
             </tr>
+            <% for(let i = 0; i < mastersData.length; i++) { %> <%
+            if(mastersData[i].name == "Jordan Spieth" || mastersData[i].name ==
+            "Max Homa" || mastersData[i].name == "Justin Rose" ||
+            mastersData[i].name == "Patrick Cantlay" || mastersData[i].name ==
+            "Cameron Young") { %>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <td><%= mastersData[i].name %></td>
+              <td><%= mastersData[i].round1 %></td>
+              <td><%= mastersData[i].round2 %></td>
+              <td><%= mastersData[i].round3 %></td>
+              <td><%= mastersData[i].round4 %></td>
+              <td><%= mastersData[i].score %></td>
             </tr>
+            <% } %> <% } %>
             <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <td><b>Top 3 Scores</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="joel" class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Round 1</th>
+              <th scope="col">Round 2</th>
+              <th scope="col">Round 3</th>
+              <th scope="col">Round 4</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Joel</b></td>
+            </tr>
+            <% for(let i = 0; i < mastersData.length; i++) { %> <%
+            if(mastersData[i].name == "Rory McIlroy" || mastersData[i].name ==
+            "Xander Schauffele" || mastersData[i].name == "Brooks Koepka" ||
+            mastersData[i].name == "Ryan Fox" || mastersData[i].name ==
+            "Tony Finau") { %>
+            <tr>
+              <td><%= mastersData[i].name %></td>
+              <td><%= mastersData[i].round1 %></td>
+              <td><%= mastersData[i].round2 %></td>
+              <td><%= mastersData[i].round3 %></td>
+              <td><%= mastersData[i].round4 %></td>
+              <td><%= mastersData[i].score %></td>
+            </tr>
+            <% } %> <% } %>
+            <tr>
+              <td><b>Top 3 Scores</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="joel" class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Round 1</th>
+              <th scope="col">Round 2</th>
+              <th scope="col">Round 3</th>
+              <th scope="col">Round 4</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Dinesh</b></td>
+            </tr>
+            <% for(let i = 0; i < mastersData.length; i++) { %> <%
+            if(mastersData[i].name == "Jason Day" || mastersData[i].name ==
+            "Dustin Johnson" || mastersData[i].name == "Jon Rahm" ||
+            mastersData[i].name == "Cameron Smith" || mastersData[i].name ==
+            "Justin Thomas") { %>
+            <tr>
+              <td><%= mastersData[i].name %></td>
+              <td><%= mastersData[i].round1 %></td>
+              <td><%= mastersData[i].round2 %></td>
+              <td><%= mastersData[i].round3 %></td>
+              <td><%= mastersData[i].round4 %></td>
+              <td><%= mastersData[i].score %></td>
+            </tr>
+            <% } %> <% } %>
+            <tr>
+              <td><b>Top 3 Scores</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="joel" class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Round 1</th>
+              <th scope="col">Round 2</th>
+              <th scope="col">Round 3</th>
+              <th scope="col">Round 4</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Kurt</b></td>
+            </tr>
+            <% for(let i = 0; i < mastersData.length; i++) { %> <%
+            if(mastersData[i].name == "Sam Burns" || mastersData[i].name ==
+            "Sungjae Im" || mastersData[i].name == "Hideki Matsuyama" ||
+            mastersData[i].name == "Collin Morikawa" || mastersData[i].name ==
+            "Scottie Scheffler") { %>
+            <tr>
+              <td><%= mastersData[i].name %></td>
+              <td><%= mastersData[i].round1 %></td>
+              <td><%= mastersData[i].round2 %></td>
+              <td><%= mastersData[i].round3 %></td>
+              <td><%= mastersData[i].round4 %></td>
+              <td><%= mastersData[i].score %></td>
+            </tr>
+            <% } %> <% } %>
+            <tr>
+              <td><b>Top 3 Scores</b></td>
             </tr>
           </tbody>
         </table>
