@@ -3,6 +3,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require("express");
+const serverless = require('serverless-http');
+const router = express.Router();
 const cheerio = require("cheerio");
 const axios = require("axios").default;
 const path = require("path");
@@ -79,6 +81,11 @@ app.get("/", async (req, res) => {
     console.log(error);
   }
 });
+
+//Code for deploying application. Using location for root url. 
+//Below we create a serverless application
+app.use('/.netlify/functions/api', router);
+module.exports.handler = serverless(app);
 
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
