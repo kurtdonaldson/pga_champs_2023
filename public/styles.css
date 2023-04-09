@@ -1,0 +1,11 @@
+
+@media (max-width: 750px) {
+    body {
+      font-size: 0.5em;
+    }
+    h1{
+      font-size: 3em;
+    }
+  }
+
+
