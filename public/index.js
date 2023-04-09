@@ -89,8 +89,9 @@ const ciaranTotalScore = parseInt(document.querySelector("#ciaran > table > tbod
 const dineshTotalScore = parseInt(document.querySelector("#dinesh > table > tbody > tr.last-row > td:nth-of-type(6)").innerText);
 
 let scoreArr = [kurtTotalScore, joelTotalScore, ciaranTotalScore, dineshTotalScore];
-scoreArr.sort();
-scoreArr.reverse();
+scoreArr.sort((a, b) => a - b);
+
+console.log(scoreArr);
 
 
 kurtDiv.style.order = scoreArr.indexOf(kurtTotalScore);
