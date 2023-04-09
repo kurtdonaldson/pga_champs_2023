@@ -10,17 +10,21 @@ const kurtTotalCell = document.querySelector(".totalScoreKurt");
 
 
 
-
-
 let ciaranTotal = 0;
 
 for(i = 0; i < tableCellsC.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
-        ciaranTotal += parseInt(tableCellsC[i].innerText);
+        if(tableCellsC[i].innerText == "E"){
+            continue;
+        }else{
+            ciaranTotal += parseInt(tableCellsC[i].innerText);
+        }
+        
     }
 }
 
 ciaranTotalCell.innerText = ciaranTotal;
+console.log(ciaranTotal);
 
 //Joel
 
@@ -28,7 +32,12 @@ let joelTotal = 0;
 
 for(i = 0; i < tableCellsJ.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
-        joelTotal += parseInt(tableCellsJ[i].innerText);
+        if(tableCellsJ[i].innerText == "E"){
+            continue;
+        }else{
+            joelTotal += parseInt(tableCellsJ[i].innerText);
+        }
+        
     }
 }
 
@@ -38,9 +47,15 @@ let dineshTotal = 0;
 
 for(i = 0; i < tableCellsD.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
-        dineshTotal += parseInt(tableCellsD[i].innerText);
+        if(tableCellsD[i].innerText == "E"){
+            continue;
+        }else{
+            dineshTotal += parseInt(tableCellsD[i].innerText);
+        }
+        
     }
 }
+
 
 dineshTotalCell.innerText = dineshTotal;
 
@@ -48,8 +63,12 @@ let kurtTotal = 0;
 
 for(i = 0; i < tableCellsK.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
-        kurtTotal += parseInt(tableCellsK[i].innerText);
-
+        if(tableCellsK[i].innerText == "E"){
+            continue;
+        }else{
+            kurtTotal += parseInt(tableCellsK[i].innerText);
+        }
+        
     }
 }
 
