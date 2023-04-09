@@ -8,13 +8,15 @@ const dineshTotalCell = document.querySelector(".totalScoreDinesh");
 const kurtTotalCell = document.querySelector(".totalScoreKurt");
 
 
+
+
+
+
 let ciaranTotal = 0;
 
 for(i = 0; i < tableCellsC.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
         ciaranTotal += parseInt(tableCellsC[i].innerText);
-        console.log(tableCellsC[i].innerText);
-        console.log(i);
     }
 }
 
@@ -27,8 +29,6 @@ let joelTotal = 0;
 for(i = 0; i < tableCellsJ.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
         joelTotal += parseInt(tableCellsJ[i].innerText);
-        console.log(tableCellsJ[i].innerText);
-        console.log(i);
     }
 }
 
@@ -39,8 +39,6 @@ let dineshTotal = 0;
 for(i = 0; i < tableCellsD.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
         dineshTotal += parseInt(tableCellsD[i].innerText);
-        console.log(tableCellsD[i].innerText);
-        console.log(i);
     }
 }
 
@@ -51,10 +49,33 @@ let kurtTotal = 0;
 for(i = 0; i < tableCellsK.length; i++){
     if(i > 0 && i < 19 && i % 6 == 0){
         kurtTotal += parseInt(tableCellsK[i].innerText);
-        console.log(tableCellsK[i].innerText);
-        console.log(i);
+
     }
 }
 
 kurtTotalCell.innerText = kurtTotal;
+
+//Order tables
+
+const ciaranDiv = document.getElementById('ciaran');
+const parent = ciaranDiv.parentNode;
+
+const joelDiv = document.getElementById('joel');
+const dineshDiv = document.getElementById('dinesh');
+const kurtDiv = document.getElementById('kurt');
+
+const kurtTotalScore = parseInt(document.querySelector("#kurt > table > tbody > tr.last-row > td:nth-of-type(6)").innerText);
+const joelTotalScore = parseInt(document.querySelector("#joel > table > tbody > tr.last-row > td:nth-of-type(6)").innerText);
+const ciaranTotalScore = parseInt(document.querySelector("#ciaran > table > tbody > tr.last-row > td:nth-of-type(6)").innerText);
+const dineshTotalScore = parseInt(document.querySelector("#dinesh > table > tbody > tr.last-row > td:nth-of-type(6)").innerText);
+
+let scoreArr = [kurtTotalScore, joelTotalScore, ciaranTotalScore, dineshTotalScore];
+scoreArr.sort();
+scoreArr.reverse();
+
+
+kurtDiv.style.order = scoreArr.indexOf(kurtTotalScore);
+joelDiv.style.order = scoreArr.indexOf(joelTotalScore);
+ciaranDiv.style.order = scoreArr.indexOf(ciaranTotalScore);
+dineshDiv.style.order = scoreArr.indexOf(dineshTotalScore);
 
