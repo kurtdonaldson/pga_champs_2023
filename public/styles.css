@@ -1,11 +1,57 @@
 
+
+
+header{
+  background-color: rgb(204, 204, 204);
+}
+
+h1{
+  margin: 0;
+  color: rgb(7, 102, 82);
+}
+
+.masters-logo{
+  width: 100px;
+  position: absolute;
+  margin-left: 5vw;
+}
+
+main{
+  background-color: rgb(7, 102, 82);
+}
+
+th{
+  background-color: grey;
+}
+
+table td{
+  color: white;
+}
+
+table th{
+  color: rgb(255, 221, 3);
+}
+
+table td{
+  border: none;
+}
+
+table .last-row{
+  border-top: 1px solid white;
+}
+
+th b{
+  color: white;
+}
+
 @media (max-width: 750px) {
-    body {
-      font-size: 0.5em;
-    }
-    h1{
-      font-size: 3em;
-    }
+  body {
+    font-size: 0.5em;
   }
-
-
+  h1{
+    font-size: 3em;
+  }
+  .masters-logo{
+    width: 60px;
+  }
+}
