@@ -11,11 +11,14 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <header><h1>Masters Pics 2023</h1></header>
-    <main>
-      <div class="table-container">
-        <table class="table">
+  <body style="width: 100vw;">
+    <header>
+      <h1 class="text-center pb-5">Masters Pics 2023</h1>
+    </header>
+    <main class="d-flex justify-content-center">
+      <section class="w-50">
+        <div class="table-container">
+        <table id="ciaran" class="table ciaran-table mb-5">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -46,10 +49,15 @@
             <% } %> <% } %>
             <tr>
               <td><b>Top 3 Scores</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="totalScoreCiaran"></td>
             </tr>
           </tbody>
         </table>
-        <table id="joel" class="table">
+        <table id="joel" class="table joel-table mb-5">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -80,10 +88,15 @@
             <% } %> <% } %>
             <tr>
               <td><b>Top 3 Scores</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="totalScoreJoel"></td>
             </tr>
           </tbody>
         </table>
-        <table id="joel" class="table">
+        <table id="dinesh" class="table dinesh-table mb-5">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -114,10 +127,15 @@
             <% } %> <% } %>
             <tr>
               <td><b>Top 3 Scores</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="totalScoreDinesh"></td>
             </tr>
           </tbody>
         </table>
-        <table id="joel" class="table">
+        <table id="kurt" class="table kurt-table mb-5">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -148,18 +166,23 @@
             <% } %> <% } %>
             <tr>
               <td><b>Top 3 Scores</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="totalScoreKurt"></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="dinish"></div>
-      <div class="ciaran"></div>
-      <div class="kurt"></div>
+      </section>
+      
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="/index.js"></script>
   </body>
 </html>
