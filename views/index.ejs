@@ -3,192 +3,189 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Masters Golf App</title>
+    <title>PGA Golf App</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body style="width: 100vw;">
-    <header>   
-      <img class="masters-logo mt-2" src="Masters Tournament Logo Vector.svg" alt="masters_logo">
-      <h1 class="text-center pt-4 pb-4">Masters Picks 2023</h1>
+  <body style="width: 100vw">
+    <header>
+      <img
+        class="masters-logo mt-2"
+        src="PGA_OakHill.jpg"
+        alt="masters_logo"
+      />
+      <h1 class="text-center pt-4 pb-4">PGA Champ Picks 2023</h1>
     </header>
     <main class="d-flex justify-content-center">
       <section>
         <div class="table-container pt-4 d-flex flex-column">
           <div id="ciaran">
-            <table  class="table ciaran-table mb-5">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Round 1</th>
-              <th scope="col">Round 2</th>
-              <th scope="col">Round 3</th>
-              <th scope="col">Round 4</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Ciaran</b></td>
-            </tr>
-            <% for(let i = 0; i < mastersData.length; i++) { %> <%
-            if(mastersData[i].name == "Jordan Spieth" || mastersData[i].name ==
-            "Max Homa" || mastersData[i].name == "Justin Rose" ||
-            mastersData[i].name == "Patrick Cantlay" || mastersData[i].name ==
-            "Cameron Young") { %>
-            <tr>
-              <td><%= mastersData[i].name %></td>
-              <td><%= mastersData[i].round1 %></td>
-              <td><%= mastersData[i].round2 %></td>
-              <td><%= mastersData[i].round3 %></td>
-              <td><%= mastersData[i].round4 %></td>
-              <td><%= mastersData[i].score %></td>
-            </tr>
-            <% } %> <% } %>
-            <tr class="last-row">
-              <td><b>Top 3 Scores</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="totalScoreCiaran"></td>
-            </tr>
-          </tbody>
-        </table>
+            <table class="table ciaran-table mb-5">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Round 1</th>
+                  <th scope="col">Round 2</th>
+                  <th scope="col">Round 3</th>
+                  <th scope="col">Round 4</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Ciaran</b></td>
+                </tr>
+                <% for(let i = 0; i < mastersData.length; i++) { %> <%
+                if(mastersData[i].name == "Rory McIlroy" || mastersData[i].name
+                == "Tommy Fleetwood" || mastersData[i].name == "Tony Finau") {
+                %>
+                <tr>
+                  <td><%= mastersData[i].name %></td>
+                  <td><%= mastersData[i].round1 %></td>
+                  <td><%= mastersData[i].round2 %></td>
+                  <td><%= mastersData[i].round3 %></td>
+                  <td><%= mastersData[i].round4 %></td>
+                  <td><%= mastersData[i].score %></td>
+                </tr>
+                <% } %> <% } %>
+                <tr class="last-row">
+                  <td><b>Score</b></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="totalScoreCiaran"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div id="joel">
-            <table  class="table joel-table mb-5">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Round 1</th>
-              <th scope="col">Round 2</th>
-              <th scope="col">Round 3</th>
-              <th scope="col">Round 4</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Joel</b></td>
-            </tr>
-            <% for(let i = 0; i < mastersData.length; i++) { %> <%
-            if(mastersData[i].name == "Rory McIlroy" || mastersData[i].name ==
-            "Xander Schauffele" || mastersData[i].name == "Brooks Koepka" ||
-            mastersData[i].name == "Ryan Fox" || mastersData[i].name ==
-            "Tony Finau") { %>
-            <tr>
-              <td><%= mastersData[i].name %></td>
-              <td><%= mastersData[i].round1 %></td>
-              <td><%= mastersData[i].round2 %></td>
-              <td><%= mastersData[i].round3 %></td>
-              <td><%= mastersData[i].round4 %></td>
-              <td><%= mastersData[i].score %></td>
-            </tr>
-            <% } %> <% } %>
-            <tr class="last-row">
-              <td><b>Top 3 Scores</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="totalScoreJoel"></td>
-            </tr>
-          </tbody>
-        </table>
-            </div>
-        <div  id="dinesh">
-          <table class="table dinesh-table mb-5">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Round 1</th>
-              <th scope="col">Round 2</th>
-              <th scope="col">Round 3</th>
-              <th scope="col">Round 4</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Dinesh</b></td>
-            </tr>
-            <% for(let i = 0; i < mastersData.length; i++) { %> <%
-            if(mastersData[i].name == "Jason Day" || mastersData[i].name ==
-            "Dustin Johnson" || mastersData[i].name == "Jon Rahm" ||
-            mastersData[i].name == "Cameron Smith" || mastersData[i].name ==
-            "Justin Thomas") { %>
-            <tr>
-              <td><%= mastersData[i].name %></td>
-              <td><%= mastersData[i].round1 %></td>
-              <td><%= mastersData[i].round2 %></td>
-              <td><%= mastersData[i].round3 %></td>
-              <td><%= mastersData[i].round4 %></td>
-              <td><%= mastersData[i].score %></td>
-            </tr>
-            <% } %> <% } %>
-            <tr class="last-row">
-              <td><b>Top 3 Scores</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="totalScoreDinesh"></td>
-            </tr>
-          </tbody>
-        </table>
+            <table class="table joel-table mb-5">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Round 1</th>
+                  <th scope="col">Round 2</th>
+                  <th scope="col">Round 3</th>
+                  <th scope="col">Round 4</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Joel</b></td>
+                </tr>
+                <% for(let i = 0; i < mastersData.length; i++) { %> <%
+                if(mastersData[i].name == "Cameron Smith" || mastersData[i].name
+                == "Dustin Johnson" || mastersData[i].name == "Brooks Koepka") {
+                %>
+                <tr>
+                  <td><%= mastersData[i].name %></td>
+                  <td><%= mastersData[i].round1 %></td>
+                  <td><%= mastersData[i].round2 %></td>
+                  <td><%= mastersData[i].round3 %></td>
+                  <td><%= mastersData[i].round4 %></td>
+                  <td><%= mastersData[i].score %></td>
+                </tr>
+                <% } %> <% } %>
+                <tr class="last-row">
+                  <td><b>Score</b></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="totalScoreJoel"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        
-        <div id="kurt">
-          <table  class="table kurt-table mb-5 border-top-0">
-          <thead>
-            <tr class="last-row border-top-0">
-              <th scope="col"></th>
-              <th scope="col">Round 1</th>
-              <th scope="col">Round 2</th>
-              <th scope="col">Round 3</th>
-              <th scope="col">Round 4</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Kurt</b></td>
-            </tr>
-            <% for(let i = 0; i < mastersData.length; i++) { %> <%
-            if(mastersData[i].name == "Sam Burns" || mastersData[i].name ==
-            "Sungjae Im" || mastersData[i].name == "Hideki Matsuyama" ||
-            mastersData[i].name == "Collin Morikawa" || mastersData[i].name ==
-            "Scottie Scheffler") { %>
-            <tr>
-              <td><%= mastersData[i].name %></td>
-              <td><%= mastersData[i].round1 %></td>
-              <td><%= mastersData[i].round2 %></td>
-              <td><%= mastersData[i].round3 %></td>
-              <td><%= mastersData[i].round4 %></td>
-              <td><%= mastersData[i].score %></td>
-            </tr>
-            <% } %> <% } %>
-            <tr class="last-row">
-              <td><b>Top 3 Scores</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="totalScoreKurt"></td>
-            </tr>
-          </tbody>
-        </table>
+          <div id="dinesh">
+            <table class="table dinesh-table mb-5">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Round 1</th>
+                  <th scope="col">Round 2</th>
+                  <th scope="col">Round 3</th>
+                  <th scope="col">Round 4</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Dinesh</b></td>
+                </tr>
+                <% for(let i = 0; i < mastersData.length; i++) { %> <%
+                if(mastersData[i].name == "Xander Schauffele" ||
+                mastersData[i].name == "Jon Rahm" || mastersData[i].name ==
+                "Justin Thomas") { %>
+                <tr>
+                  <td><%= mastersData[i].name %></td>
+                  <td><%= mastersData[i].round1 %></td>
+                  <td><%= mastersData[i].round2 %></td>
+                  <td><%= mastersData[i].round3 %></td>
+                  <td><%= mastersData[i].round4 %></td>
+                  <td><%= mastersData[i].score %></td>
+                </tr>
+                <% } %> <% } %>
+                <tr class="last-row">
+                  <td><b>Score</b></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="totalScoreDinesh"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        
-      </div>
+
+          <div id="kurt">
+            <table class="table kurt-table mb-5 border-top-0">
+              <thead>
+                <tr class="last-row border-top-0">
+                  <th scope="col"></th>
+                  <th scope="col">Round 1</th>
+                  <th scope="col">Round 2</th>
+                  <th scope="col">Round 3</th>
+                  <th scope="col">Round 4</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Kurt</b></td>
+                </tr>
+                <% for(let i = 0; i < mastersData.length; i++) { %> <%
+                if(mastersData[i].name == "Max Homa" || mastersData[i].name == "Viktor Hovland" ||
+                 mastersData[i].name == "Scottie Scheffler") { %>
+                <tr>
+                  <td><%= mastersData[i].name %></td>
+                  <td><%= mastersData[i].round1 %></td>
+                  <td><%= mastersData[i].round2 %></td>
+                  <td><%= mastersData[i].round3 %></td>
+                  <td><%= mastersData[i].round4 %></td>
+                  <td><%= mastersData[i].score %></td>
+                </tr>
+                <% } %> <% } %>
+                <tr class="last-row">
+                  <td><b>Score</b></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="totalScoreKurt"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
-      
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
