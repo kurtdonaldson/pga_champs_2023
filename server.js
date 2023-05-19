@@ -33,7 +33,7 @@ async function getMastersData() {
     //Selecting the rows of the players
     const elemSelector =
       "#fittPageContainer > div:nth-child(3) > div > div.PageLayout__Main > section:nth-child(2) > div > div > div > div.Button--group > div.competitors > div > div > div > div.Table__Scroller > table > tbody > tr";
-
+//#fittPageContainer > div:nth-child(3) > div > div.PageLayout__Main > section:nth-child(2) > div > div > div > div.Button--group > div.competitors > div > div > div > div.Table__Scroller > table > tbody > tr:nth-child(2) > td:nth-child(7)
     //Each player object will be stored here
     const mastersObjectArray = [];
 
@@ -43,12 +43,12 @@ async function getMastersData() {
 
       let nameData = $(parentElement).children("td.tl.plyr.Table__TD").text();
 
-      let round1 = $(parentElement).children("tr > td:nth-child(11)").text();
+      let round1 = $(parentElement).children("tr > td:nth-child(7)").text();
 
-      let round2 = $(parentElement).children("tr > td:nth-child(12)").text();
+      let round2 = $(parentElement).children("tr > td:nth-child(8)").text();
 
-      let round3 = $(parentElement).children("tr > td:nth-child(13)").text();
-      let round4 = $(parentElement).children("tr > td:nth-child(14)").text();
+      let round3 = $(parentElement).children("tr > td:nth-child(9)").text();
+      let round4 = $(parentElement).children("tr > td:nth-child(10)").text();
       // let total = $(parentElement).children("tr > td:nth-child(12)").text();
 
       let scoreData = $(parentElement).children("tr > td:nth-child(5)").text();
@@ -60,6 +60,11 @@ async function getMastersData() {
       mastersObject.round3 = round3;
       mastersObject.round4 = round4;
       mastersObject.score = scoreData;
+
+      // console.log(round1);
+      // console.log(round2);
+      // console.log(round3);
+      // console.log(round4);
 
       // console.log(nameData);
       // console.log(scoreData);
