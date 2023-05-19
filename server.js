@@ -43,12 +43,12 @@ async function getMastersData() {
 
       let nameData = $(parentElement).children("td.tl.plyr.Table__TD").text();
 
-      let round1 = $(parentElement).children("tr > td:nth-child(7)").text();
+      let round1 = $(parentElement).children("tr > td:nth-child(8)").text();
 
-      let round2 = $(parentElement).children("tr > td:nth-child(8)").text();
+      let round2 = $(parentElement).children("tr > td:nth-child(9)").text();
 
-      let round3 = $(parentElement).children("tr > td:nth-child(9)").text();
-      let round4 = $(parentElement).children("tr > td:nth-child(10)").text();
+      let round3 = $(parentElement).children("tr > td:nth-child(10)").text();
+      let round4 = $(parentElement).children("tr > td:nth-child(11)").text();
       // let total = $(parentElement).children("tr > td:nth-child(12)").text();
 
       let scoreData = $(parentElement).children("tr > td:nth-child(5)").text();
